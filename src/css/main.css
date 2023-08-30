@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline: none;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnEntrar{
+    padding: 10px 20px;
+    background-color: rgb(105, 223, 76);
+    color: #fff;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px 0;
+    font-size: 3em;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.enter{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.enter input[type="text"]{
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.sadBoy2001{
+    display: none;
+}
+.placar{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 280px;
+    background-color: rgb(253, 255, 126);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+}
+.placar .sair{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.placar .sair a{
+    background-color: rgb(235, 88, 88);
+}
+input[type="radio"]{
+    display: none;
+}
+.choseAttack{
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: .2s;
+}
+#pedra{
+    background-image: url("../img/game0.png");
+}
+#papel{
+    background-image: url("../img/game1.png");
+}
+#tesoura{
+    background-image: url("../img/game2.png");
+}
+#lagarto{
+    background-image: url("../img/game3.png");
+}
+#spock{
+    background-image: url("../img/game4.png");
+}
+
+.choseAttack:hover#pedra{
+    opacity: 1;
+}
+.choseAttack:hover#papel{
+    opacity: 1;    
+}
+.choseAttack:hover#tesoura{
+    opacity: 1;    
+}
+.choseAttack:hover#lagarto{
+    opacity: 1;
+}
+.choseAttack:hover#spock{
+    opacity: 1;
+}
+
+.choses{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    height: 167px;
+}
+.choses h2{
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.controles{
+    display: flex;
+}
+
+.display{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display p{    
+    margin: 20px;
+}
+
+.dGame{
+    width: 250px;
+    height: 250px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    border-radius: 50%;
+}
+.x{
+    height: 100%;
+    padding-top: 35px;
+}
+#pcpu{
+    background-image: url("../img/robo.gif");
+}
+#pplayer{
+    background-image: url("../img/user.png");
+}
+
+.modal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal .modal-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.modal .modal-box{
+    width: 330px;
+    height: 200px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 6px;
+    position: relative;
+}
+.modal .modal-box .modal-header{
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    height: 42px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    z-index: 99;
+}
+.modal .modal-box .modal-body{
+    display: flex;
+    padding: 25px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 40px);
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    border-radius: 0 0 6px 6px;
+}
+
+
+@keyframes open {
+    from{
+        /* width: 0; */
+        /* height: 0; */
+        opacity: 0;
+    }
+    to{
+        /* width: 100vw; */
+        /* height: 100vh; */
+        opacity: 1;
+    }
+}
+
+@keyframes close {
+    from{
+        /* width: 100vw; */
+        /* height: 100vh; */
+        opacity: 1;
+    }
+    to{
+        /* width: 0; */
+        /* height: 0; */
+        opacity: 0;
+    }
+}

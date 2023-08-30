@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jo-ken-pô</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="src/css/main.css">
+    <script src="src/js/main.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Jo-Ken-Pô</h1>
+
+        <form class="enter" onsubmit="choseName(); return false;">
+            <div><label for="name">Digite o seu nome:</label></div>
+            <div><input type="text" name="name" id="name" placeholder="Digite seu nome aqui" max="40" maxlength="40" autocomplete="off" autofocus></div>
+            <input type="button" class="btnEntrar" onclick="choseName()" value="Entrar">
+        </form>
+        <div class="sadBoy2001">
+            <div class="game">
+
+                <div class="display">
+                    <div>
+                        <span id="playerName"></span>
+                        <div class="dGame" id="pplayer"></div>
+                    </div>
+                    <p class="x">x</p>
+                    <div>
+                        <span>CPU</span>
+                        <div class="dGame" id="pcpu"></div>
+                    </div>
+                </div>
+
+                <form class="choses">
+                    <h2>Escolha seu ataque</h2>
+                    <div class="controles">
+                        <div>
+                            <div class="choseAttack" id="pedra" onclick="attack('pedra')"></div>
+                        </div>
+                        <div>
+                            <div class="choseAttack" id="papel" onclick="attack('papel')"></div>
+                        </div>
+                        <div>
+                            <div class="choseAttack" id="tesoura" onclick="attack('tesoura')"></div>
+                        </div>
+                        <div>
+                            <div class="choseAttack" id="lagarto" onclick="attack('lagarto')"></div>
+                        </div>
+                        <div>
+                            <div class="choseAttack" id="spock" onclick="attack('spock')"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="placar">
+                <div>
+                    <span id="userName">User: </span><span id="userPlacar">0</span>
+                </div>
+
+                <div>
+                    <span>CPU: </span><span id="cpuPlacar">0</span>
+                </div>
+                
+                <div>
+                    <span>Empates: </span><span id="empatePlacar">0</span>
+                </div>
+
+                <div>
+                    <span>Jogadas: </span><span id="jogadas">0</span>
+                </div>
+                <div class="sair">
+                    <a href="" class="btnEntrar">Sair</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal" style="display: none;">
+        <div class="modal-background"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-message"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
